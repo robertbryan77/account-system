@@ -5,6 +5,10 @@
   "repository": "https://github.com/robertbryan77/account-system.git",
   "author": "RobertBryan77 <robert.bryan3010@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon node src/server.js"
+},
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.17.2"
