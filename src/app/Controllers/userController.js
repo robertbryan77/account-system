@@ -1,4 +1,5 @@
 const User = require('../models/User');
+const bcryptjs = require('bcryptjs');
 
 class userController {
     show(req, res) {
@@ -16,12 +17,14 @@ class userController {
         //Validação
 
         const { name, email, password } = req.body;
-
+    
         const data = {
             name,
             email,
             password
         }
+
+        data.password = await bcryptjs.hash(data.password, 8)
 
         await User.create(data, (err) => {
             if (err)
