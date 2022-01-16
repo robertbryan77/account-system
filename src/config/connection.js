@@ -8,8 +8,7 @@ class Connection {
 
     dataBaseConnectionMongoDB() {
         this.dataBaseConnection = mongoose.connect("mongodb://localhost/nodejs", {
-            useNewUrlParser: true,
-            useUnifiedTopology: true
+            
         })
             .then(() => {
                 console.log("Conexão estabelecida");
