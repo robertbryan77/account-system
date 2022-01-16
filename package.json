@@ -8,10 +8,11 @@
   "scripts": {
     "start": "node src/server.js",
     "dev": "nodemon node src/server.js"
-},
+  },
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^4.17.2"
+    "express": "^4.17.2",
+    "mongoose": "^6.1.6"
   },
   "devDependencies": {
     "nodemon": "^2.0.15"

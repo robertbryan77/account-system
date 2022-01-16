@@ -1,7 +1,7 @@
-const { Router } = require("express");
-const { route } = require("./app");
+const { Router } = require('express');
+// const { route } = require('./app');
 
-const userController = require("./app/Controllers/userController");
+const userController = require('./app/Controllers/userController');
 
 const routes = new Router();
 
