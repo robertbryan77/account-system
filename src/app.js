@@ -17,7 +17,7 @@ class App {
             res.header("Access-controll-Allow-Methods","Get, POST, PUT, DELETE");
             res.header("Access-controll-Allow-Headers", "Acess, Content-type, Authorization, Acept, Origin, X-Requested-with");
 
-            this.app.use(corse());
+            this.app.use(cors());
             next();
         })
     }
