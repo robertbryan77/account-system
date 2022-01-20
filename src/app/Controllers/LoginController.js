@@ -14,8 +14,13 @@ class LogiController {
                 message: "Usuário não existe!"
             })
         }
-
-       await bcryptjs.compare(userExist.password, userExist)
+        if(!(await bcryptjs.compare(userExist.password, userExist))) {
+            return res.status(400).json({
+                error: true,
+                message: "A senha está inválida"
+            })
+        }
+       
     }
 }
 
