@@ -24,7 +24,7 @@ class LogiController {
             })
         }
 
-        // retorna o token do usuário
+        // retorna o token do usuário com jwt
 
         return res.status(200).json({
             user: {
@@ -32,9 +32,9 @@ class LogiController {
                 email: userExist.email
             },
             token: jwt.sign(
-                {id: userExist._id},
+                { id: userExist._id },
                 config.secret,
-                {expiresIn: config.expireIn})
+                { expiresIn: config.expireIn })
         })
 
     }

@@ -1,6 +1,7 @@
 const User = require('../Models/User');
 const bcrypt = require('bcryptjs');
 const yup = require('yup');
+const mongoose = require('mongoose');
 
 class UserController {
     show(req, res) {
